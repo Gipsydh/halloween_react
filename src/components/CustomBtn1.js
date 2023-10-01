@@ -1,8 +1,8 @@
-const CustomBtn1=()=>{
+const CustomBtn1=({name})=>{
  return (
   <>
   <button className="customBtn__1" type="button">
-   Explore Now!!
+   {name}
   </button>
   </>
  )

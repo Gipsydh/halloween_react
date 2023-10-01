@@ -8,10 +8,10 @@ const Creatures = () => {
   return (
     <>
       <section className='section category'>
-        <LeftGlow></LeftGlow>
+        <LeftGlow height="200px"></LeftGlow>
 
-        <h2>Explore Your</h2>
-        <h2>Spooky Category</h2>
+        <h2 className='center__align'>Explore Your</h2>
+        <h2 className='center__align'>Spooky Category</h2>
         <div className='cardBox'>
           {creatureItems.map((creatureItem) => {
             return (

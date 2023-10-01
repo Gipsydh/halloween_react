@@ -1,5 +1,5 @@
-const LeftGlow=()=>{
- return (<div className='backLightLeft backLight'>
+const LeftGlow=({height})=>{
+ return (<div style={{top:height}} className='backLightLeft backLight'>
    <div className='innerGlow left'></div>
  </div>)
 }
