@@ -1,57 +1,37 @@
-// import Reveal from 'react-awesome-reveal'
-// import { keyframes } from '@emotion/react'
-
-// const customAnimation = keyframes`
-//   from {
-//     opacity: 0;
-//     transform: translate3d(-200px, -100px, 0);
-//   }
-
-//   to {
-//     opacity: 1;
-//     transform: translate3d(0, 0, 0);
-//   }
-// `
-
-// function CustomAnimation({ children }) {
-//   return <Reveal keyframes={customAnimation}>{children}</Reveal>
-// }
-// const customAnimationLeft = keyframes`
-//   from {
-//     opacity: 0;
-//     transform: translate3d(-200px, 0, 0);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: translate3d(0, 0, 0);
-//   }
-// `
-// const customAnimationRight = keyframes`
-//   from {
-//     opacity: 0;
-//     transform: translate3d(200px, 0,0 );
-//   }
-//   to {
-//     opacity: 1;
-//     transform: translate3d(0, 0, 0);
-//   }
-// `
-const TreesLeft = () => {
+import { Fade } from 'react-reveal'
+const TreesLeft = ({ rotate, size, bottom, left }) => {
   return (
-    // <Reveal keyframes={customAnimationLeft} delay={300}>
-      <div className='backGroundTreeLeft backgroundTree'>
-        <img src={'./resources/home-tree1.png'} alt='' />
-      </div>
-    // {/* </Reveal> */}
+    <Fade left>
+
+    <div
+      className='backGroundTreeLeft backgroundTree'
+      style={{ bottom: bottom, left: left }}
+    >
+      <img
+        style={{ transform: `rotate(${rotate}deg)`, height: `${size}px` }}
+        src={'./resources/home-tree1.png'}
+        alt=''
+      />
+    </div>
+    </Fade>
   )
 }
 const TreesRight = () => {
+
   return (
-    // <Reveal keyframes={customAnimationRight} delay={300}>
-      <div className='backGroundTreeRight backgroundTree'>
-        <img src={'./resources/home-tree2.png'} alt='' />
-      </div>
-    // </Reveal>
+    <Fade right>
+
+    <div className='backGroundTreeRight backgroundTree'>
+      <img src={'./resources/home-tree2.png'} alt='' />
+    </div>
+    </Fade>
   )
 }
-export { TreesLeft, TreesRight }
+const TreeBottom = () => {
+  return (
+    <div className='backGroundTreeBottom backgroundTree '>
+      <img src={'./resources/footer-tree2.png'} alt='' />
+    </div>
+  )
+}
+export { TreesLeft, TreesRight, TreeBottom }

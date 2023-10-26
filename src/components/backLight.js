@@ -8,4 +8,5 @@ const RightGlow=()=>{
    <div className='innerGlow right'></div>
  </div>)
 }
+
 export {LeftGlow,RightGlow}

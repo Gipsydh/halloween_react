@@ -1,6 +1,9 @@
-const ItemCard = ({ id, title, img,logo, info }) => {
+import {Fade} from 'react-reveal'
+const ItemCard = ({ id, title, img,logo, info,delay }) => {
   return (
     <>
+    <Fade top delay={delay} distance="50px">
+
       <article className='card item_card itemCard1 box-item'>
         <div className='flip-box'>
           <div className='flip-box-front '>
@@ -19,6 +22,7 @@ const ItemCard = ({ id, title, img,logo, info }) => {
           </div>
         </div>
       </article>
+    </Fade>
     </>
   )
 }

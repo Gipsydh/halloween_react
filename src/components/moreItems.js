@@ -6,7 +6,7 @@ const MoreItems = () => {
   const [creatureItems, setCreatureItems] = useState(creatureData2)
   return (
     <>
-    <section className="section">
+    <section className="section" id='items'>
 
       <LeftGlow height="200px"></LeftGlow>
       <h2 className='center__align'>Select Your</h2>
